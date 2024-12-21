@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Mesh Success</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #F9F9F9;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      table {
+        margin: 50px auto;
+        border-collapse: collapse;
+        width: 80%;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 12px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .selectable-row:hover {
+        background-color: #EFEFEF;
+        cursor: pointer;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Mesh Completed!</h1>
+    <h2>Showing Mesh Rating Stats for User <%= userId1 %> and User <%= userId2 %></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Comparisons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < ratings.length-1; i++) { %>
+          <tr>
+            <td><%= ratings[i][0].comparison %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>

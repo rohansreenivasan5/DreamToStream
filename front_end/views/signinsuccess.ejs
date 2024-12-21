@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sign in Success</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #F9F9F9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+	h2 {
+		text-align: center;
+	}
+
+    table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      width: 80%;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .selectable-row:hover {
+      background-color: #EFEFEF;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #007bff;
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+	<h1>Sign in Success!</h1>
+	<h2>Please select your profile</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Date of Birth</th>
+				<th>Country</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% users.forEach(function(user) { %>
+				<tr class="selectable-row" onclick="window.location.href='/home/<%= user.id %>';">
+					<td><%= user.id %></td>
+					<td><%= user.firstName %></td>
+					<td><%= user.lastName %></td>
+					<td><%= user.birthDate %></td>
+					<td><%= user.country %></td>
+				</tr>
+			<% }); %>
+		</tbody>
+	</table>
+  <a href="/sign-in">Back to sign in</a>
+</body>
+</html>

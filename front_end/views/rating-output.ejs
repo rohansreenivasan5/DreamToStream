@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Query Result</title>
+</head>
+
+<body>
+  <h1>Query Result</h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>date</th>
+      <th>value</th>
+      <th>comments</th>
+    </tr>
+    <% result.forEach(function(row) { %>
+      <tr>
+        <td>
+          <%= row.id %>
+        </td>
+        <td>
+          <%= row.name %>
+        </td>
+        <td>
+          <%= row.date %>
+        </td>
+        <td>
+          <%= row.value %>
+        </td>
+        <td>
+          <%= row.comments %>
+        </td>
+      </tr>
+      <% }); %>
+  </table>
+</body>
+
+</html>

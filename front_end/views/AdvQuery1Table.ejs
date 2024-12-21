@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Shows</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+    table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      border: 2px solid #ccc;
+      background-color: #fff;
+      width: 80%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+      color: #666;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Top Titles</h1>
+  <input type="text" id="genre" placeholder="Genre..." class="form-control" autocomplete="off">
+  <input type="number" id="sYear" placeholder="Start Year" class="form-control" autocomplete="off">
+  <input type="number" id="eYear" placeholder="End Year" class="form-control" autocomplete="off">
+  <table id="mytable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Release Year</th>
+        <th>Rating</th>
+        <th>Genre</th>
+      </tr>
+    </thead>
+    
+      <tbody id="results"></tbody>
+      
+  </table>
+</body>
+</html>
+<script type="text/javascript">
+
+window.onload = function() {
+  // load_ratings();
+};
+  const genreInput = document.querySelector('#genre');
+  const sYearInput = document.querySelector('#sYear');
+  const eYearInput = document.querySelector('#eYear');
+
+  const results_body = document.querySelector('#results');
+  
+  load_data(); 
+  
+  sYearInput.addEventListener('input', loadquery);
+  eYearInput.addEventListener('input', loadquery);
+  genreInput.addEventListener('input', loadquery);
+  
+  const query = {genre: genreInput.value,
+                sYear: sYearInput.value, 
+                eYear: eYearInput.value};
+
+  load_data(query);
+
+  function loadquery(){
+    const query = {genre: genreInput.value,
+                sYear: sYearInput.value, 
+                eYear: eYearInput.value};
+              load_data(query);
+  }
+
+  function load_data(query = { genre:'', sYear: 2000, eYear: 2020})
+  {
+      const request = new XMLHttpRequest();
+      var params = '?'
+      for (prop in query){
+        params+=`${prop}=${query[prop]}&`
+      }
+      request.open('GET', `/topMovies${params}`);
+  
+      request.onload = () => {
+  
+          const results = JSON.parse(request.responseText);
+  
+          let html = '';
+  
+          if(results.length > 0)
+          {
+              results.forEach(result => {
+                  html += `
+                  <tr>
+                      <td>`+result.name+`</td>
+                      <td>`+result.releaseYear+`</td>
+                      <td>`+result.value+`</td>
+                      <td>`+result.genre+`</td>
+                  </tr>
+                  `;
+              });
+          }
+          else
+          {
+              html += `
+              <tr>
+                  <td colspan="5" class="text-center">No Data Found</td>
+              </tr>
+              `;
+          }
+  
+          results_body.innerHTML = html;
+  
+      };
+  
+      request.send();
+  }
+
+  
+  </script>

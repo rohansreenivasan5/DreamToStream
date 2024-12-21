@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Shows</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+    table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      border: 2px solid #ccc;
+      background-color: #fff;
+      width: 80%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+      color: #666;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shows</h1>
+  <input type="text" id="search" placeholder="Search..." class="form-control" autocomplete="off">
+  <!-- <select name="country" id="country" class="form-conrol">
+  </select> -->
+  <!-- <select name="rating" id="rating" class="form-conrol" onchange="loadquery()">
+  </select> -->
+  <input type="text" id="genre" placeholder="Genre..." class="form-control" autocomplete="off">
+  <!-- <select name="type" id="type" class="form-conrol" onchange="loadquery()"> -->
+    <!-- <option value="Shows, Movies">All</option>
+    <option value="Shows">Shows</option>
+    <option value="Sovies">Movies</option>
+  </select> -->
+  <table id="mytable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Country</th>
+        <th>Release Year</th>
+        <th>TV Rating</th>
+        <th>Seasons</th>
+        <th>Genre</th>
+        <th>Platform</th>
+      </tr>
+    </thead>
+    
+      <tbody id="results"></tbody>
+      
+  </table>
+</body>
+</html>
+<script type="text/javascript">
+
+window.onload = function() {
+  // load_ratings();
+};
+
+  const searchInput = document.querySelector('#search');
+  const countryInput = document.querySelector('#country');
+  const genreInput = document.querySelector('#genre');
+  const typeInput = document.querySelector('#type');
+  const ratingInput = document.querySelector('#rating');
+
+  
+  const results_body = document.querySelector('#results');
+  
+  load_data(); 
+  
+  searchInput.addEventListener('input', loadquery);
+  genreInput.addEventListener('input', loadquery);
+  
+  const query = {title: searchInput.value,
+                genre: genreInput.value};
+
+  load_data(query);
+
+  function loadquery(){
+    const query = {title: searchInput.value,
+                genre: genreInput.value};
+              load_data(query);
+  }
+
+  function load_ratings(){
+    const request = new XMLHttpRequest();
+    request.open('GET', `/ratings`);
+    
+    console.log(request.responseText)
+    request.onload = () => {
+      let html = '<option value="">Every</option>';
+      console.log(request.responseText)
+      const results = JSON.parse(request.responseText);
+      
+      results.forEach(result=>{
+        html += `<option value="`+result.tvRating+`">`+result.tvRating+`</option>`
+      })
+      ratingInput.innerHTML = html
+    }
+    request.send()
+    
+  }
+
+  function load_data(query = {title: '', genre:''})
+  {
+      const request = new XMLHttpRequest();
+      var params = '?'
+      for (prop in query){
+        params+=`${prop}=${query[prop]}&`
+      }
+      request.open('GET', `/search${params}`);
+  
+      request.onload = () => {
+  
+          const results = JSON.parse(request.responseText);
+  
+          let html = '';
+  
+          if(results.length > 0)
+          {
+              results.forEach(result => {
+                  html += `
+                  <tr>
+                      <td>`+result.name+`</td>
+                      <td>`+result.country+`</td>
+                      <td>`+result.releaseYear+`</td>
+                      <td>`+result.tvRating+`</td>
+                      <td>`+result.seasons+`</td>
+                      <td>`+result.genre+`</td>
+                      <td>`+result.platform+`</td>
+                  </tr>
+                  `;
+              });
+          }
+          else
+          {
+              html += `
+              <tr>
+                  <td colspan="5" class="text-center">No Data Found</td>
+              </tr>
+              `;
+          }
+  
+          results_body.innerHTML = html;
+  
+      };
+  
+      request.send();
+  }
+
+  
+  </script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Mesh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+        color: #212529;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      button[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Mesh</h1>
+
+    <form action="/user-mesh-query" method="get">
+      <div class="form-group">
+        <label for="userId1">User 1 ID:</label>
+        <input type="text" id="userId1" name="userId1" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="userId2">User 2 ID:</label>
+        <input type="text" id="userId2" name="userId2" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Compare Users</button>
+    </form>
+  </body>
+</html>

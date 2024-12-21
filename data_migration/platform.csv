@@ -1,0 +1,273 @@
+﻿serverId,platform,country
+0,Netflix,Afghanistan
+1,Netflix,Albania
+2,Netflix,Algeria
+3,Netflix,Andorra
+4,Netflix,Angola
+5,Netflix,Anguilla
+6,Netflix,Antigua and Barbuda
+7,Netflix,Argentina
+8,Netflix,Armenia
+9,Netflix,Aruba
+10,Netflix,Australia
+11,Netflix,Austria
+12,Netflix,Azerbaijan
+13,Netflix,Bahamas
+14,Netflix,Bahrain
+15,Netflix,Bangladesh
+16,Netflix,Barbados
+17,Netflix,Belarus
+18,Netflix,Belgium
+19,Netflix,Belize
+20,Netflix,Benin
+21,Netflix,Bermuda
+22,Netflix,Bhutan
+23,Netflix,Bolivia
+24,Netflix,Bosnia and Herzegovina
+25,Netflix,Botswana
+26,Netflix,Brazil
+27,Netflix,British Virgin Islands
+28,Netflix,Brunei Darussalam
+29,Netflix,Bulgaria
+30,Netflix,Burkina Faso
+31,Netflix,Burundi
+32,Netflix,Cambodia
+33,Netflix,Cameroon
+34,Netflix,Canada
+35,Netflix,Cape Verde
+36,Netflix,Cayman Islands
+37,Netflix,Central African Republic
+38,Netflix,Chad
+39,Netflix,Chile
+40,Netflix,China
+41,Netflix,Colombia
+42,Netflix,Comoros
+43,Netflix,"Congo, Republic of the"
+44,Netflix,Costa Rica
+45,Netflix,Cote d'Ivoire
+46,Netflix,Croatia
+47,Netflix,Cuba
+48,Netflix,Cyprus
+49,Netflix,Czech Republic
+50,Netflix,Denmark
+51,Netflix,Djibouti
+52,Netflix,Dominica
+53,Netflix,Dominican Republic
+54,Netflix,Ecuador
+55,Netflix,Egypt
+56,Netflix,El Salvador
+57,Netflix,Equatorial Guinea
+58,Netflix,Eritrea
+59,Netflix,Estonia
+60,Netflix,Eswatini
+61,Netflix,Ethiopia
+62,Netflix,Falkland Islands (Islas Malvinas)
+63,Netflix,Faroe Islands
+64,Netflix,Fiji
+65,Netflix,Finland
+66,Netflix,France
+67,Netflix,French Guiana
+68,Netflix,French Polynesia
+69,Netflix,Gabon
+70,Netflix,Gambia
+71,Netflix,Georgia
+72,Netflix,Germany
+73,Netflix,Ghana
+74,Netflix,Gibraltar
+75,Netflix,Greece
+76,Netflix,Greenland
+77,Netflix,Grenada
+78,Netflix,Guadeloupe
+79,Netflix,Guam
+80,Netflix,Guatemala
+81,Netflix,Guinea
+82,Netflix,Guinea-Bissau
+83,Netflix,Guyana
+84,Netflix,Haiti
+85,Netflix,Honduras
+86,Netflix,Hong Kong
+87,Netflix,Hungary
+88,Netflix,Iceland
+89,Netflix,India
+90,Netflix,Indonesia
+91,Netflix,Iran
+92,Netflix,Iraq
+93,Netflix,Ireland
+94,Netflix,Isle of Man
+95,Netflix,Israel
+96,Netflix,Italy
+97,Netflix,Jamaica
+98,Netflix,Japan
+99,Netflix,Jordan
+100,Netflix,Kazakhstan
+101,Netflix,Kenya
+102,Netflix,Kiribati
+103,Netflix,"Korea, Democratic People's Republic of (North Korea)"
+104,Netflix,"Korea, Republic of (South Korea)"
+105,Netflix,Kuwait
+106,Netflix,Kyrgyzstan
+107,Netflix,Laos
+108,Netflix,Latvia
+109,Netflix,Lebanon
+110,Netflix,Lesotho
+111,Netflix,Liberia
+112,Netflix,Libya
+113,Netflix,Liechtenstein
+114,Netflix,Lithuania
+115,Netflix,Luxembourg
+116,Netflix,Macau
+117,Netflix,Madagascar
+118,Netflix,Malawi
+119,Netflix,Malaysia
+120,Netflix,Maldives
+121,Netflix,Mali
+122,Netflix,Malta
+123,Netflix,Marshall Islands
+124,Netflix,Martinique
+125,Netflix,Mauritania
+126,Netflix,Mauritius
+127,Netflix,Mayotte
+128,Netflix,Mexico
+129,Netflix,"Micronesia, Federated States of"
+130,Netflix,Moldova
+131,Netflix,Monaco
+132,Netflix,Mongolia
+133,Netflix,Montenegro
+134,Netflix,Montserrat
+135,Netflix,Morocco
+136,Netflix,Mozambique
+137,Netflix,Myanmar (Burma)
+138,Netflix,Namibia
+139,Netflix,Nauru
+140,Netflix,Nepal
+141,Netflix,Netherlands
+142,Netflix,New Caledonia
+143,Netflix,New Zealand
+144,Netflix,Nicaragua
+145,Netflix,Niger
+146,Netflix,Nigeria
+147,Netflix,Niue
+148,Netflix,Norfolk Island
+149,Netflix,North Macedonia
+150,Netflix,Northern Mariana Islands
+151,Netflix,Norway
+152,Netflix,Oman
+153,Netflix,Pakistan
+154,Netflix,Palau
+155,Netflix,Palestinian Territories
+156,Netflix,Panama
+157,Netflix,Papua New Guinea
+158,Netflix,Paraguay
+159,Netflix,Peru
+160,Netflix,Philippines
+161,Netflix,Poland
+162,Netflix,Portugal
+163,Netflix,Puerto Rico
+164,Netflix,Qatar
+165,Netflix,Reunion
+166,Netflix,Romania
+167,Netflix,Russia
+168,Netflix,Rwanda
+169,Netflix,Saint Helena
+170,Netflix,Saint Kitts and Nevis
+171,Netflix,Saint Lucia
+172,Netflix,Saint Pierre and Miquelon
+173,Netflix,Saint Vincent and the Grenadines
+174,Netflix,Samoa
+175,Netflix,San Marino
+176,Netflix,Sao Tome and Principe
+177,Netflix,Saudi Arabia
+178,Netflix,Senegal
+179,Netflix,Serbia
+180,Netflix,Seychelles
+181,Netflix,Sierra Leone
+182,Netflix,Singapore
+183,Netflix,Slovakia
+184,Netflix,Slovenia
+185,Netflix,Solomon Islands
+186,Netflix,Somalia
+187,Netflix,South Africa
+188,Netflix,South Sudan
+189,Disney+,Australia
+190,Disney+,Austria
+191,Disney+,Belgium
+192,Disney+,Brazil
+193,Disney+,Canada
+194,Disney+,Chile
+195,Disney+,Colombia
+196,Disney+,Costa Rica
+197,Disney+,Denmark
+198,Disney+,Ecuador
+199,Disney+,Finland
+200,Disney+,France
+201,Disney+,Germany
+202,Disney+,Greece
+203,Disney+,Guatemala
+204,Disney+,Honduras
+205,Disney+,Hong Kong
+206,Disney+,Hungary
+207,Disney+,Iceland
+208,Disney+,India
+209,Disney+,Indonesia
+210,Disney+,Ireland
+211,Disney+,Israel
+212,Disney+,Italy
+213,Disney+,Japan
+214,Disney+,Luxembourg
+215,Disney+,Malaysia
+216,Disney+,Malta
+217,Disney+,Mexico
+218,Disney+,Monaco
+219,Disney+,Netherlands
+220,Disney+,New Zealand
+221,Disney+,Nicaragua
+222,Disney+,Norway
+223,Disney+,Panama
+224,Disney+,Peru
+225,Disney+,Philippines
+226,Disney+,Portugal
+227,Disney+,Puerto Rico
+228,Disney+,Singapore
+229,Disney+,Slovakia
+230,Disney+,South Africa
+231,Disney+,South Korea
+232,Disney+,Spain
+233,Disney+,Sweden
+234,Disney+,Switzerland
+235,Disney+,Taiwan
+236,Disney+,Thailand
+237,Disney+,United Kingdom
+238,Disney+,United States
+239,Disney+,Uruguay
+240,Disney+,Venezuela
+241,Disney+,Vietnam
+242,Hulu,United States
+243,Amazon Prime Video,Australia
+244,Amazon Prime Video,Austria
+245,Amazon Prime Video,Belgium
+246,Amazon Prime Video,Brazil
+247,Amazon Prime Video,Canada
+248,Amazon Prime Video,Colombia
+249,Amazon Prime Video,Denmark
+250,Amazon Prime Video,Finland
+251,Amazon Prime Video,France
+252,Amazon Prime Video,Germany
+253,Amazon Prime Video,India
+254,Amazon Prime Video,Ireland
+255,Amazon Prime Video,Italy
+256,Amazon Prime Video,Japan
+257,Amazon Prime Video,Luxembourg
+258,Amazon Prime Video,Mexico
+259,Amazon Prime Video,Netherlands
+260,Amazon Prime Video,New Zealand
+261,Amazon Prime Video,Norway
+262,Amazon Prime Video,Peru
+263,Amazon Prime Video,Poland
+264,Amazon Prime Video,Portugal
+265,Amazon Prime Video,Singapore
+266,Amazon Prime Video,Spain
+267,Amazon Prime Video,Sweden
+268,Amazon Prime Video,Switzerland
+269,Amazon Prime Video,United Arab Emirates
+270,Amazon Prime Video,United Kingdom
+271,Amazon Prime Video,United States

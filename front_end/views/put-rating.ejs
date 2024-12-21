@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ratings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h2>DreamToStream: Add/Update/Delete a Rating</h2>
+                <form action="put-rating?id=<%= userId %>" method="POST">
+                    <div class="form-group">
+                        <label for="change">Add, Update, or Delete  a Rating?</label>
+                        <input type="change" class="form-control col-lg-9" id="change"
+                            placeholder="Type 'Add', 'Update', or 'Delete'" name="change">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Movie or Tv Show?</label>
+                        <input type="text" class="form-control col-lg-9" id="type" placeholder="Type 'Movie' or 'TV'"
+                            name="type">
+                    </div>
+                    <div class="form-group">
+                        <label for="media">Media Name</label>
+                        <input type="text" class="form-control col-lg-9" id="media" placeholder="Enter a Title"
+                            name="media">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <input type="text" class="form-control col-lg-9" id="rating" placeholder="Enter Rating 1-10"
+                            name="rating">
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Comments</label>
+                        <input type="text" class="form-control col-lg-9" id="comments" placeholder="Comments"
+                            name="comments">
+                    </div>
+                    <div class="form-group mb-4">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
